@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Ply Peach Imagen</title>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script   src="https://code.jquery.com/jquery-3.6.3.slim.js"   integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc="   crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("[rel='tooltip']").tooltip();
+            });
+        </script>
+        <div
+        class="bg-image"
+        style="height:20vh;
+            background-image: url('/static/images/header.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #000000;
+            background-position: center;
+        ">
+        </div>
+        <div
+        class="bg-image"
+        style="height: 80vh;
+            background-image: url('/static/images/body.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #000000;
+            background-position:center bottom
+        ">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div style = "position:relative; top:2em;">
+                    <h1 class="text-center" style="color:#d5d5d5">PLY PEACH IMAGE GEN</h1> 
+                    <p class="text-center" style="color:#bababa">This site shows how basic models of Image generators perform</p>
+                    <p class="text-center" style="color:#bababa">Here are pictures of the Artist the generators used for training <a href="https://www.behance.net/th71">Ply peach</a></p>
+                    <form action = '/generate'>
+                        <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+                            <div style="padding: 5px;">
+                                <button type="submit" name="Method" value="DCGAN" class="btn btn-outline-light">DCGAN</button>
+                            </div>
+                            <div style="padding: 5px;">
+                                <span class="d-inline-block" tabindex="0" rel="tooltip" title="Currently not implemented">
+                                    <button type="submit" name="Method" value="VAE" class="btn btn-outline-light" disabled>VAE</button>
+                                </span>
+                            </div>
+                            <div style="padding: 5px;">
+                                <button type="submit" name="Method" value="DDPM" class="btn btn-outline-light">DDPM</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+                        <div style="padding-top: 2em;">
+                            <button type="button" class="btn btn-outline-light"><a href={{url_for("about")}} class="link-light" style="text-decoration:none">Learn more</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
