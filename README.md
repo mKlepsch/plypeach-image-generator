@@ -11,8 +11,8 @@ In addition to the image generation models, we also created a showcase website w
 
 The following Python packages are required to run the scripts:
 
--    PyTorch 2.0
--     NumPy
--     matplotlib
--     PIL (Python Imaging Library)
--     Flask (for the website)
+- PyTorch 2.0
+- NumPy
+- matplotlib
+- PIL (Python Imaging Library)
+- Flask (for the website)
